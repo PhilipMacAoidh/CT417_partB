@@ -6,7 +6,6 @@ import ie.nuigalway.macaoidh.StudentEnrollment.Module;
 import ie.nuigalway.macaoidh.StudentEnrollment.CourseProgramme;
 
 public class Driver {
-    //create students, modules and courses
     private static Student Sa = new Student("Student_A", 22, LocalDate.parse("1996-8-4"), 302, new CourseProgramme("Course_A", LocalDate.parse("2018-9-1"), LocalDate.parse("2019-5-30")));
     private static Student Sb = new Student("Student_B", 22, LocalDate.parse("1996-1-1"), 863, new CourseProgramme("Course_B", LocalDate.parse("2018-8-31"), LocalDate.parse("2019-5-20")));
     private static Student Sc = new Student("Student_C", 27, LocalDate.parse("1991-1-1"), 947, new CourseProgramme("Course_C", LocalDate.parse("2018-9-10"), LocalDate.parse("2019-6-3")));
@@ -24,7 +23,6 @@ public class Driver {
     
     public static void main(String args[])
     {
-        //seting modules to courses
         Ca.setModules(Ma);
         Ca.setModules(Mb);
         Ca.setModules(Mc);
@@ -41,7 +39,6 @@ public class Driver {
         Cd.setModules(Mb);
         Cd.setModules(Md);
         
-        //set Courses to Modules
         Ma.setCourses(Ca);
         Ma.setCourses(Cc);
         Ma.setCourses(Cd);
@@ -58,7 +55,6 @@ public class Driver {
         Md.setCourses(Cc);
         Md.setCourses(Cd);
         
-        //set Students to modules
         Ma.setStudents(Sa);
         Ma.setStudents(Sc);
         Ma.setStudents(Sd);
@@ -75,7 +71,6 @@ public class Driver {
         Md.setStudents(Sc);
         Md.setStudents(Sd);
         
-        //assign students modules
         Sa.setModules(Ma);
         Sa.setModules(Mb);
         Sa.setModules(Mc);
@@ -92,7 +87,6 @@ public class Driver {
         Sd.setModules(Mb);
         Sd.setModules(Md);
         
-        //set students to courses
         Ca.setStudents(Sa);
         Ca.setStudents(Sb);
         Ca.setStudents(Sc);
@@ -109,20 +103,18 @@ public class Driver {
         Cd.setStudents(Sb);
         Cd.setStudents(Sd);
         
-        //print Courses
+        
         
         System.out.print(Ca + "\n\n");
         System.out.print(Cb + "\n\n");
         System.out.print(Cc + "\n\n");
         System.out.print(Cd + "\n\n");
         
-        //printing Modules
         System.out.print(Ma + "\n\n");
         System.out.print(Mb + "\n\n");
         System.out.print(Mc + "\n\n");
         System.out.print(Md + "\n\n");
 
-        //printing Students
         System.out.print(Sa + "\n\n");
         System.out.print(Sb + "\n\n");
         System.out.print(Sc + "\n\n");
